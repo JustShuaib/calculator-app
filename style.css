@@ -1,5 +1,75 @@
+@font-face {
+  font-family: "Spartan";
+  src: url("./spartan-cufonfonts/Spartan-Bold.ttf");
+}
+/* Theme one */
+:root {
+  /* Backgrounds */
+  --very-dark-desaturated-blue: hsl(222, 26%, 31%);
+  --very-dark-desaturated-blue-keypad: hsl(223, 31%, 20%);
+  --very-dark-desaturated-blue-screen: hsl(224, 36%, 15%);
+  /* Keys */
+  --desaturated-dark-blue-key-bg: hsl(225, 21%, 49%);
+  --desaturated-dark-blue-key-shadow: hsl(224, 28%, 35%);
+  --red-key-bg-toggle: hsl(6, 63%, 50%);
+  --dark-red-key-shadow: hsl(6, 70%, 34%);
+  --light-grayish-orange-key-bg: hsl(30, 25%, 89%);
+  --grayish-orange-key-shadow: hsl(28, 16%, 65%);
+  /* Text */
+  --very-dark-grayish-blue: hsl(221, 14%, 31%);
+}
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+body {
+  font-family: Spartan, sans-serif;
+  font-size: 2rem;
+  background-color: var(--very-dark-desaturated-blue);
+}
+main {
+  width: min(95%, 20rem);
+  margin: 0 auto;
+}
+h1 {
+  color: white;
+  font-size: 2rem;
+}
+.container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  background-color: var(--very-dark-desaturated-blue-screen);
+}
+input {
+  background-color: var(--very-dark-desaturated-blue-keypad);
+  border: none;
+  padding: 1.5rem 1rem;
+  width: 100%;
+  margin-block: 1rem;
+  border-radius: 5px;
+  color: white;
+  font: inherit;
+  text-align: right;
+}
+.btn {
+  font: inherit;
+  color: var(--very-dark-grayish-blue);
+  border: none;
+  border-bottom: 4px solid var(--grayish-orange-key-shadow);
+  border-radius: 10px;
+  padding: 0.7rem 1rem;
+}
+.btn--alt {
+  color: white;
+  background-color: var(--desaturated-dark-blue-key-bg);
+  border-color: var(--desaturated-dark-blue-key-shadow);
+}
+.btn--equals {
+  column-span: 2;
+  background-color: var(--red-key-bg-toggle);
+  border-color: var(--dark-red-key-shadow);
+  color: white;
 }
