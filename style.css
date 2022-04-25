@@ -61,6 +61,7 @@ input {
   border-bottom: 4px solid var(--grayish-orange-key-shadow);
   border-radius: 10px;
   padding: 0.7rem 1rem;
+  cursor: pointer;
 }
 .btn--alt {
   color: white;
