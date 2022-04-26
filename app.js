@@ -4,19 +4,16 @@ const btns = document.querySelectorAll(".btn");
 let currNumber,
   firstNumber = [],
   isInModifiedState = false,
-  operation = null;
-secondNumber = [];
+  operation = null,
+  secondNumber = [];
 btns.forEach((btn) => {
   btn.addEventListener("click", (e) => {
     currNumber = parseInt(e.target.value);
-    if (isFinite(currNumber))
+    // Checks if the button is a number or a dot
+    if (isFinite(currNumber) || e.target.value === ".")
       isInModifiedState
-        ? secondNumber.push(currNumber)
-        : firstNumber.push(currNumber);
-    if (e.target.value === ".")
-      isInModifiedState
-        ? secondNumber.push(e.target.value)
-        : firstNumber.push(e.target.value);
+        ? secondNumber.push(currNumber || e.target.value)
+        : firstNumber.push(currNumber || e.target.value);
     //? DELETE BUTTON
     if (e.target.textContent === "DEL") {
       `${isInModifiedState ? secondNumber.pop() : firstNumber.pop()}`;
