@@ -66,9 +66,8 @@ main {
   grid-template-rows: repeat(5, 1fr);
   gap: 0.8rem;
   background-color: var(--very-dark-desaturated-blue-screen);
-  padding: 1.5rem 1rem;
+  padding: 1.5rem;
   border-radius: 10px;
-  /* margin-bottom: 1rem; */
 }
 .btn {
   color: var(--very-dark-grayish-blue);
