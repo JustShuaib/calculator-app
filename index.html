@@ -26,32 +26,38 @@
         <input id="off" name="state-d" type="radio" />
         <label for="off" onclick="">OFF</label>
       </div> -->
-      <!-- Toggele -->
+      <!-- Toggle -->
       <header class="header">
         <h1 class="header__main">calc</h1>
         <div class="header__theme"><span>THEME</span></div>
       </header>
-      <input type="text" disabled value="399,981" class="input__main" />
-      <div class="container">
-        <button class="btn">7</button>
-        <button class="btn">8</button>
-        <button class="btn">9</button>
+      <input
+        type="text"
+        disabled
+        value="0"
+        class="input__main"
+        id="output-display"
+      />
+      <form class="container">
+        <button class="btn" value="7">7</button>
+        <button class="btn" value="8">8</button>
+        <button class="btn" value="9">9</button>
         <button class="btn btn--alt">DEL</button>
-        <button class="btn">4</button>
-        <button class="btn">5</button>
-        <button class="btn">6</button>
-        <button class="btn">+</button>
-        <button class="btn">1</button>
-        <button class="btn">2</button>
-        <button class="btn">3</button>
+        <button class="btn" value="4">4</button>
+        <button class="btn" value="5">5</button>
+        <button class="btn" value="6">6</button>
+        <button class="btn" value="+">+</button>
+        <button class="btn" value="1">1</button>
+        <button class="btn" value="2">2</button>
+        <button class="btn" value="3">3</button>
         <button class="btn">-</button>
-        <button class="btn">.</button>
-        <button class="btn">0</button>
+        <button class="btn" value=".">.</button>
+        <button class="btn" value="0">0</button>
         <button class="btn">/</button>
         <button class="btn">x</button>
-        <button class="btn btn--alt btn--reset">RESET</button>
+        <button class="btn btn--alt btn--reset" type="reset">RESET</button>
         <button class="btn btn--equals">=</button>
-      </div>
+      </form>
     </main>
     <script src="./app.js"></script>
   </body>
