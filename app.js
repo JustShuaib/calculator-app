@@ -57,7 +57,7 @@ btns.forEach((btn) => {
           parseFloat(firstNumber.join("")) / parseFloat(secondNumber.join(""));
       }
       outputDisplay.value = result;
-      firstNumber = [] || [...result.toString()];
+      firstNumber = result ? [...result.toString()] : [];
       secondNumber = [];
       e.preventDefault();
       return;
