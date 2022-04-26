@@ -23,6 +23,7 @@ btns.forEach((btn) => {
     }
     //? ADD BUTTON
     if (e.target.textContent === "+") {
+      outputDisplay.value = firstNumber.join("");
       isInModifiedState = true;
       operation = "+";
     }
@@ -59,7 +60,7 @@ btns.forEach((btn) => {
           parseFloat(firstNumber.join("")) / parseFloat(secondNumber.join(""));
       }
       outputDisplay.value = result;
-      firstNumber = [];
+      firstNumber = [...result.toString()];
       secondNumber = [];
       e.preventDefault();
       return;
