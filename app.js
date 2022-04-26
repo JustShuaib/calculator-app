@@ -9,7 +9,7 @@ let currNumber,
 btns.forEach((btn) => {
   btn.addEventListener("click", (e) => {
     currNumber = parseInt(e.target.value);
-    // Checks if the button is a number or a dot
+    // If the button is a number or a dot
     if (isFinite(currNumber) || e.target.value === ".")
       isInModifiedState
         ? secondNumber.push(currNumber || e.target.value)
@@ -57,7 +57,7 @@ btns.forEach((btn) => {
           parseFloat(firstNumber.join("")) / parseFloat(secondNumber.join(""));
       }
       outputDisplay.value = result;
-      firstNumber = [...result.toString()];
+      firstNumber = [] || [...result.toString()];
       secondNumber = [];
       e.preventDefault();
       return;
@@ -65,14 +65,17 @@ btns.forEach((btn) => {
 
     //? RESET BUTTON
     if (e.target.type === "reset") {
-      outputDisplay.value = 0;
       isInModifiedState = false;
       firstNumber = [];
       secondNumber = [];
     }
-    outputDisplay.value = isInModifiedState
-      ? secondNumber.join("")
-      : firstNumber.join("");
+    if (isInModifiedState) {
+      if (secondNumber.length >= 1) {
+        outputDisplay.value = secondNumber.join("");
+      }
+    } else {
+      outputDisplay.value = firstNumber.join("");
+    }
     e.preventDefault();
   });
 });
