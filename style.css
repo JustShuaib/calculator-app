@@ -29,7 +29,6 @@ body {
 }
 main {
   width: 100%;
-  /* max-height: 100vh; */
   display: grid;
   justify-content: center;
   align-items: center;
@@ -42,7 +41,6 @@ main {
   color: white;
   margin: 1.5rem 0;
   margin-top: 2rem;
-  background-color: red;
 }
 .header__main {
   font-size: 1.5rem;
@@ -66,7 +64,7 @@ main {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, 1fr);
-  gap: 0.7rem;
+  gap: 0.8rem;
   background-color: var(--very-dark-desaturated-blue-screen);
   padding: 1.5rem 1rem;
   border-radius: 10px;
@@ -77,8 +75,8 @@ main {
   border: none;
   border-bottom: 3px solid var(--grayish-orange-key-shadow);
   border-radius: 5px;
-  padding: 0.7rem;
-  padding-top: 1rem;
+  padding: 0.9rem;
+  padding-top: 1.2rem;
   cursor: pointer;
   font: inherit;
 }
