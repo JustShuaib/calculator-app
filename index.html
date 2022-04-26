@@ -15,11 +15,23 @@
   </head>
   <body>
     <main>
-      <header>
-        <h1>calc</h1>
-        <div></div>
+      <!-- Toggele -->
+      <!-- <div class="switch-toggle switch-3 switch-candy">
+        <input id="on" name="state-d" type="radio" checked="" />
+        <label for="on" onclick="">ON</label>
+
+        <input id="na" name="state-d" type="radio" checked="checked" />
+        <label for="na" class="disabled" onclick="">N/A</label>
+
+        <input id="off" name="state-d" type="radio" />
+        <label for="off" onclick="">OFF</label>
+      </div> -->
+      <!-- Toggele -->
+      <header class="header">
+        <h1 class="header__main">calc</h1>
+        <div class="header__theme"><span>THEME</span></div>
       </header>
-      <input type="text" disabled value="399,981" />
+      <input type="text" disabled value="399,981" class="input__main" />
       <div class="container">
         <button class="btn">7</button>
         <button class="btn">8</button>
@@ -37,7 +49,7 @@
         <button class="btn">0</button>
         <button class="btn">/</button>
         <button class="btn">x</button>
-        <button class="btn btn--alt">RESET</button>
+        <button class="btn btn--alt btn--reset">RESET</button>
         <button class="btn btn--equals">=</button>
       </div>
     </main>
