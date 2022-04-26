@@ -66,8 +66,13 @@ main {
   grid-template-rows: repeat(5, 1fr);
   gap: 0.8rem;
   background-color: var(--very-dark-desaturated-blue-screen);
-  padding: 1rem;
+  padding: 1.5rem;
   border-radius: 10px;
+}
+@media screen and (min-width: 400px) {
+  .container {
+    gap: 1rem;
+  }
 }
 .btn {
   color: var(--very-dark-grayish-blue);
@@ -78,6 +83,11 @@ main {
   padding-top: 1.2rem;
   cursor: pointer;
   font: inherit;
+}
+@media screen and (min-width: 400px) {
+  .btn {
+    padding: 1rem 1.8rem 0.9rem 1.8rem;
+  }
 }
 .btn--alt {
   color: white;
