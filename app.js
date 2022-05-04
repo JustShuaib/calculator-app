@@ -1,42 +1,48 @@
-const outputDisplay = document.getElementById("output-display");
-const btns = document.querySelectorAll(".btn");
+const outputDisplay = document.getElementById("output-display"),
+  btns = document.querySelectorAll(".btn");
 
-let currOperation = "",
-  resultDisplayed = false,
+let currentOperation = "",
+  resultIsDisplayed = false,
   result = "";
 
-btns.forEach((btn) => {
-  btn.addEventListener("click", (e) => {
-    if (btn.value !== "") {
-      resultDisplayed = false;
-      currOperation += btn.value;
-    }
-    //? DELETE BUTTON
-    if (e.target.textContent === "DEL") {
-      resultDisplayed = false;
-      currOperation = currOperation.slice(0, -1);
-    }
-    //? EQUALS BUTTON
-    if (e.target.textContent === "=") {
-      resultDisplayed = true;
-      try {
-        currOperation = result = String(eval(currOperation.replace(/×/g, "*")));
-      } catch {
-        result = "Invalid Input";
-        currOperation = "";
-      }
-      e.preventDefault();
-    }
-    //? RESET BUTTON
-    if (e.target.type === "reset") {
-      resultDisplayed = false;
-      currOperation = "";
-    }
+btns.forEach((btn) => btn.addEventListener("click", performOperation));
 
-    outputDisplay.value = resultDisplayed ? result : currOperation;
+function performOperation(e) {
+  if (e.target.value) {
+    resultIsDisplayed = false;
+    currentOperation += e.target.value;
+  }
+  // DELETE BUTTON
+  if (e.target.textContent === "DEL") {
+    resultIsDisplayed = false;
+    currentOperation = currentOperation.slice(0, -1);
+  }
+  // EQUALS BUTTON
+  if (e.target.textContent === "=") {
+    resultIsDisplayed = true;
+    try {
+      currentOperation = result = String(
+        eval(currentOperation.replace(/×/g, "*"))
+      );
+      if (result === "Infinity" || result === "NaN") {
+        result = "Infinity";
+        currentOperation = "";
+      }
+    } catch {
+      result = "Invalid Input";
+      currentOperation = "";
+    }
     e.preventDefault();
-  });
-});
+  }
+  // RESET BUTTON
+  if (e.target.type === "reset") {
+    resultIsDisplayed = false;
+    currentOperation = "";
+  }
+
+  outputDisplay.value = resultIsDisplayed ? result : currentOperation;
+  e.preventDefault();
+}
 
 /* function formatOutput(str) {
   let output = [];
@@ -44,5 +50,4 @@ btns.forEach((btn) => {
     output.push(str.substring(i, i + 3));
   }
   return output.join();
-}
- */
+} */
