@@ -2,12 +2,17 @@ const outputDisplay = document.getElementById("output-display");
 const form = document.querySelector("form");
 const btns = document.querySelectorAll(".btn");
 let currNumber,
+  currOperation = "",
   firstNumber = [],
   isInModifiedState = false,
   operation = null,
   secondNumber = [];
 btns.forEach((btn) => {
   btn.addEventListener("click", (e) => {
+    if (btn.value !== "") {
+      currOperation += btn.value;
+      console.log(btn.value);
+    }
     currNumber = parseInt(e.target.value);
     // If the button is a number or a dot
     if (isFinite(currNumber) || e.target.value === ".")
@@ -77,5 +82,6 @@ btns.forEach((btn) => {
       outputDisplay.value = firstNumber.join("");
     }
     e.preventDefault();
+    console.log(currOperation);
   });
 });
