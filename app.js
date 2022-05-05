@@ -41,7 +41,7 @@ function performOperation(e) {
         currentOperation = "";
       }
     } catch {
-      result = "Invalid Input";
+      result = "Error";
       currentOperation = "";
     }
     e.preventDefault();
