@@ -1,11 +1,13 @@
 const outputDisplay = document.getElementById("output-display"),
   btns = document.querySelectorAll(".btn");
-const themeOne = document.querySelector(".theme--one"),
-  themeTwo = document.querySelector(".theme--two"),
-  themeThree = document.querySelector(".theme--three");
+
 let currentOperation = "",
   resultIsDisplayed = false,
   result = "";
+
+const themeOne = document.querySelector(".theme--one"),
+  themeTwo = document.querySelector(".theme--two"),
+  themeThree = document.querySelector(".theme--three");
 
 btns.forEach((btn) => btn.addEventListener("click", performOperation));
 
@@ -45,10 +47,7 @@ function performOperation(e) {
   outputDisplay.value = resultIsDisplayed ? result : currentOperation;
   e.preventDefault();
 }
-function setTheme(theme) {
-  document.documentElement.className = theme;
-  localStorage.setItem("theme", theme);
-}
+
 themeOne.addEventListener("click", (e) => {
   setTheme("dark");
   e.preventDefault();
@@ -64,14 +63,12 @@ themeThree.addEventListener("click", (e) => {
   e.preventDefault();
 });
 
+function setTheme(theme) {
+  document.documentElement.className = theme;
+  localStorage.setItem("theme", theme);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   const theme = localStorage.getItem("theme");
   if (theme) document.documentElement.className = theme;
 });
-/* function formatOutput(str) {
-  let output = [];
-  for (let i = 0; i < str.length; i += 3) {
-    output.push(str.substring(i, i + 3));
-  }
-  return output.join();
-} */
