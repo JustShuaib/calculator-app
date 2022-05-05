@@ -1,8 +1,8 @@
 const outputDisplay = document.getElementById("output-display"),
   btns = document.querySelectorAll(".btn");
-const themeOne = document.querySelector(".theme--one");
-const themeTwo = document.querySelector(".theme--two");
-const themeThree = document.querySelector(".theme--three");
+const themeOne = document.querySelector(".theme--one"),
+  themeTwo = document.querySelector(".theme--two"),
+  themeThree = document.querySelector(".theme--three");
 let currentOperation = "",
   resultIsDisplayed = false,
   result = "";

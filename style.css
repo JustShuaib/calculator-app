@@ -2,6 +2,51 @@
   font-family: "Spartan";
   src: url("./spartan/Spartan-Bold.ttf");
 }
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-bg: hsl(222, 26%, 31%);
+    --main-text: #fff;
+    --input-bg: hsl(224, 36%, 15%);
+    --container-bg: hsl(223, 31%, 20%);
+
+    --btn-text: hsl(221, 14%, 31%);
+    --btn-bg: hsl(30, 25%, 89%);
+    --btn-border: hsl(28, 16%, 65%);
+
+    --alt-btn-bg: hsl(225, 21%, 49%);
+    --alt-btn-border: hsl(224, 28%, 35%);
+    --equals-text: #fff;
+    --equals-bg: hsl(6, 63%, 50%);
+    --equals-border: hsl(6, 70%, 34%);
+
+    --theme-one-btn: hsl(6, 63%, 50%);
+    --theme-two-btn: hsl(223, 31%, 20%);
+    --theme-three-btn: hsl(223, 31%, 20%);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --main-bg: hsl(0, 0%, 90%);
+    --main-text: hsl(60, 10%, 19%);
+    --input-bg: hsl(0, 0%, 93%);
+    --container-bg: hsl(0, 5%, 81%);
+
+    --btn-text: hsl(60, 10%, 19%);
+    --btn-bg: hsl(45, 7%, 89%);
+    --btn-border: hsl(35, 11%, 61%);
+
+    --alt-btn-bg: hsl(185, 42%, 37%);
+    --alt-btn-border: hsl(185, 58%, 25%);
+    --equals-text: #fff;
+    --equals-bg: hsl(25, 98%, 40%);
+    --equals-border: hsl(25, 99%, 27%);
+
+    --theme-one-btn: hsl(0, 5%, 81%);
+    --theme-two-btn: hsl(25, 98%, 40%);
+    --theme-three-btn: hsl(0, 5%, 81%);
+  }
+}
 :root,
 :root.dark {
   --main-bg: hsl(222, 26%, 31%);
@@ -192,4 +237,6 @@ main {
   border-color: var(--equals-border);
   color: var(--equals-text);
   background-color: var(--equals-bg);
+}
+@media (prefers-color-scheme: dark) {
 }
