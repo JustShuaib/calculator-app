@@ -2,76 +2,66 @@
   font-family: "Spartan";
   src: url("./spartan/Spartan-Bold.ttf");
 }
-/* Theme one */
 :root,
 :root.dark {
-  /* Backgrounds */
   --main-bg: hsl(222, 26%, 31%);
   --main-text: #fff;
+  --input-bg: hsl(224, 36%, 15%);
+  --container-bg: hsl(223, 31%, 20%);
+
   --btn-text: hsl(221, 14%, 31%);
   --btn-bg: hsl(30, 25%, 89%);
-  --equals-text: #fff;
-  --input-bg: hsl(224, 36%, 15%);
+  --btn-border: hsl(28, 16%, 65%);
 
-  --container-bg: hsl(223, 31%, 20%);
-  --very-dark-desaturated-blue-screen: hsl(224, 36%, 15%);
-  /* Keys */
-  --desaturated-dark-blue-key-bg: hsl(225, 21%, 49%);
-  --desaturated-dark-blue-key-shadow: hsl(224, 28%, 35%);
-  --red-key-bg-toggle: hsl(6, 63%, 50%);
-  --dark-red-key-shadow: hsl(6, 70%, 34%);
-  --light-grayish-orange-key-bg: hsl(30, 25%, 89%);
-  --grayish-orange-key-shadow: hsl(28, 16%, 65%);
-  /* Text */
-  --text-blue: hsl(221, 14%, 31%);
+  --alt-btn-bg: hsl(225, 21%, 49%);
+  --alt-btn-border: hsl(224, 28%, 35%);
+  --equals-text: #fff;
+  --equals-bg: hsl(6, 63%, 50%);
+  --equals-border: hsl(6, 70%, 34%);
+
+  --theme-one-btn: hsl(6, 63%, 50%);
+  --theme-two-btn: hsl(223, 31%, 20%);
+  --theme-three-btn: hsl(223, 31%, 20%);
 }
-/* Theme two */
 :root.light {
-  /* Backgrounds */
   --main-bg: hsl(0, 0%, 90%);
   --main-text: hsl(60, 10%, 19%);
+  --input-bg: hsl(0, 0%, 93%);
+  --container-bg: hsl(0, 5%, 81%);
+
   --btn-text: hsl(60, 10%, 19%);
   --btn-bg: hsl(45, 7%, 89%);
+  --btn-border: hsl(35, 11%, 61%);
+
+  --alt-btn-bg: hsl(185, 42%, 37%);
+  --alt-btn-border: hsl(185, 58%, 25%);
   --equals-text: #fff;
-  --input-bg: hsl(0, 0%, 93%);
+  --equals-bg: hsl(25, 98%, 40%);
+  --equals-border: hsl(25, 99%, 27%);
 
-  --container-bg: hsl(0, 5%, 81%);
-  --very-dark-desaturated-blue-screen: hsl(0, 0%, 93%);
-
-  /* Keys */
-  --desaturated-dark-blue-key-bg: hsl(185, 42%, 37%);
-  --desaturated-dark-blue-key-shadow: hsl(185, 58%, 25%);
-  --red-key-bg-toggle: hsl(25, 98%, 40%);
-  --dark-red-key-shadow: hsl(25, 99%, 27%);
-  --light-grayish-orange-key-bg: hsl(45, 7%, 89%);
-  --grayish-orange-key-shadow: hsl(35, 11%, 61%);
-  /* Text */
+  --theme-one-btn: hsl(0, 5%, 81%);
+  --theme-two-btn: hsl(25, 98%, 40%);
+  --theme-three-btn: hsl(0, 5%, 81%);
 }
-/* Theme three */
 :root.purple {
-  /* Backgrounds */
   --main-bg: hsl(268, 75%, 9%);
   --main-text: hsl(52, 100%, 62%);
+  --input-bg: hsl(268, 71%, 12%);
+  --container-bg: hsl(268, 71%, 12%);
+
   --btn-text: hsl(52, 100%, 62%);
   --btn-bg: hsl(268, 47%, 21%);
+  --btn-border: hsl(290, 70%, 36%);
+
+  --alt-btn-bg: hsl(281, 89%, 26%);
+  --alt-btn-border: hsl(285, 91%, 52%);
   --equals-text: hsl(198, 20%, 13%);
-  --input-bg: hsl(268, 71%, 12%);
+  --equals-bg: hsl(176, 100%, 44%);
+  --equals-border: hsl(177, 92%, 70%);
 
-  --container-bg: hsl(268, 71%, 12%);
-  --very-dark-desaturated-blue-screen: hsl(268, 71%, 12%);
-
-  /* Keys */
-  --desaturated-dark-blue-key-bg: hsl(281, 89%, 26%);
-  --desaturated-dark-blue-key-shadow: hsl(285, 91%, 52%);
-  --red-key-bg-toggle: hsl(176, 100%, 44%);
-  --dark-red-key-shadow: hsl(177, 92%, 70%);
-  --light-grayish-orange-key-bg: hsl(268, 47%, 21%);
-  --grayish-orange-key-shadow: hsl(290, 70%, 36%);
-  /* Text */
-  --text-blue: hsl(60, 7%, 47%);
-  --light-yellow: hsl(52, 100%, 62%);
-  --very-dark-blue: hsl(198, 20%, 13%);
-  --white: hsl(0, 0, 100%);
+  --theme-one-btn: hsl(268, 71%, 12%);
+  --theme-two-btn: hsl(268, 71%, 12%);
+  --theme-three-btn: hsl(176, 100%, 44%);
 }
 * {
   padding: 0;
@@ -87,7 +77,7 @@ main {
   display: grid;
   justify-content: center;
   align-items: center;
-  padding: 0 2rem;
+  padding: 2rem;
 }
 .header {
   display: flex;
@@ -108,6 +98,9 @@ main {
 }
 .header__theme:first-of-type {
   gap: 1rem;
+}
+.theme__copy {
+  margin-bottom: 0.4rem;
 }
 .header__theme--switch {
   display: flex;
@@ -134,23 +127,23 @@ main {
   border-radius: 50%;
 }
 .theme--one {
-  background-color: var(--red-key-bg-toggle);
+  background-color: var(--theme-one-btn);
 }
 .theme--two {
-  background-color: var(--red-key-bg-toggle);
+  background-color: var(--theme-two-btn);
 }
 .theme--three {
-  background-color: var(--desaturated-dark-blue-key-shadow);
+  background-color: var(--theme-three-btn);
 }
 .input__main {
   background-color: var(--input-bg);
   border: none;
-  padding: 2rem 1rem;
+  padding: 1.5rem;
   width: 100%;
-  margin-block: 2rem;
-  border-radius: 5px;
+  margin-block: 1rem;
+  border-radius: 10px;
   color: var(--main-text);
-  font-size: 1.5rem;
+  font-size: 2rem;
   text-align: right;
 }
 .container {
@@ -171,7 +164,7 @@ main {
   color: var(--btn-text);
   background-color: var(--btn-bg);
   border: none;
-  border-bottom: 3px solid var(--grayish-orange-key-shadow);
+  border-bottom: 3px solid var(--btn-border);
   border-radius: 5px;
   padding: 0.9rem;
   padding-top: 1.2rem;
@@ -185,8 +178,8 @@ main {
 }
 .btn--alt {
   color: white;
-  background-color: var(--desaturated-dark-blue-key-bg);
-  border-color: var(--desaturated-dark-blue-key-shadow);
+  background-color: var(--alt-btn-bg);
+  border-color: var(--alt-btn-border);
 }
 .btn--reset {
   width: 100%;
@@ -196,49 +189,7 @@ main {
 .btn--equals {
   grid-column: 3/5;
   grid-row: 5;
-  background-color: var(--red-key-bg-toggle);
-  border-color: var(--dark-red-key-shadow);
+  border-color: var(--equals-border);
   color: var(--equals-text);
+  background-color: var(--equals-bg);
 }
-/*
-  <body>
-    <button class="toggle-btn light-mode" aria-label="Toggle light mode">
-      <span>Light Mode</span>
-      <i class="fa-solid fa-moon"></i>
-    </button>
-    <button class="toggle-btn dark-mode" aria-label="Toggle dark mode">
-      <span>Dark Mode</span>
-      <i class="fa-solid fa-sun"></i>
-    </button>
-    <script>
-      const toggleBtn = document.querySelectorAll(".toggle-btn");
-      toggleBtn.forEach((btn) => {
-        btn.addEventListener("click", toggleMode);
-      });
-      function toggleMode(e) {
-        if (e.currentTarget.classList.contains("dark-mode")) {
-          document.documentElement.setAttribute("color-mode", "dark");
-          //Sets the user's preference in local storage
-          localStorage.setItem("color-mode", "dark");
-          return;
-        }
-        document.documentElement.setAttribute("color-mode", "light");
-
-        // Sets the user's preference in local storage
-        localStorage.setItem("color-mode", "light");
-      }
-      // This code assumes a Light Mode default
-      if (
-        /* This condition checks whether the user has set a site preference for dark mode OR a OS-level preference for Dark Mode AND no site preference 
-        localStorage.getItem("color-mode") === "dark" ||
-        (window.matchMedia("(prefers-color-scheme: dark)").matches &&
-          !localStorage.getItem("color-mode"))
-      ) {
-        // if true, set the site to Dark Mode
-        document.documentElement.setAttribute("color-mode", "dark");
-      }
-    </script>
-  </body>
-</html>
-
-/* DARK MODE */
