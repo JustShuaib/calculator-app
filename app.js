@@ -45,27 +45,29 @@ function performOperation(e) {
   outputDisplay.value = resultIsDisplayed ? result : currentOperation;
   e.preventDefault();
 }
-const setTheme = (theme) => {
+function setTheme(theme) {
   document.documentElement.className = theme;
-};
+  localStorage.setItem("theme", theme);
+}
 themeOne.addEventListener("click", (e) => {
-  console.log("You clicked theme One");
-  document.documentElement.className = "dark";
+  setTheme("dark");
   e.preventDefault();
 });
 
 themeTwo.addEventListener("click", (e) => {
-  console.log("You clicked theme two");
-  document.documentElement.className = "light";
+  setTheme("light");
   e.preventDefault();
 });
 
 themeThree.addEventListener("click", (e) => {
-  console.log("You clicked theme Three");
-  document.documentElement.className = "purple";
+  setTheme("purple");
   e.preventDefault();
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const theme = localStorage.getItem("theme");
+  if (theme) document.documentElement.className = theme;
+});
 /* function formatOutput(str) {
   let output = [];
   for (let i = 0; i < str.length; i += 3) {
