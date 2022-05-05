@@ -1,6 +1,8 @@
 const outputDisplay = document.getElementById("output-display"),
   btns = document.querySelectorAll(".btn");
-
+const themeOne = document.querySelector(".theme--one");
+const themeTwo = document.querySelector(".theme--two");
+const themeThree = document.querySelector(".theme--three");
 let currentOperation = "",
   resultIsDisplayed = false,
   result = "";
@@ -43,6 +45,26 @@ function performOperation(e) {
   outputDisplay.value = resultIsDisplayed ? result : currentOperation;
   e.preventDefault();
 }
+const setTheme = (theme) => {
+  document.documentElement.className = theme;
+};
+themeOne.addEventListener("click", (e) => {
+  console.log("You clicked theme One");
+  document.documentElement.className = "dark";
+  e.preventDefault();
+});
+
+themeTwo.addEventListener("click", (e) => {
+  console.log("You clicked theme two");
+  document.documentElement.className = "light";
+  e.preventDefault();
+});
+
+themeThree.addEventListener("click", (e) => {
+  console.log("You clicked theme Three");
+  document.documentElement.className = "purple";
+  e.preventDefault();
+});
 
 /* function formatOutput(str) {
   let output = [];
