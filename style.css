@@ -82,7 +82,7 @@ main {
   /* padding: 2rem; */
 }
 .container {
-  /* align-items: center; */
+  align-items: center;
 }
 .header {
   display: flex;
