@@ -72,6 +72,7 @@
 body {
   background-color: var(--main-bg);
   height: 98vh;
+  transition: all 1s ease-in-out;
 }
 main {
   width: 100%;
@@ -88,6 +89,7 @@ main {
   color: var(--main-text);
   margin: 1.5rem 0;
   margin-top: 2rem;
+  transition: all 0.7s linear;
 }
 .header__main {
   font-size: 1.5rem;
@@ -147,6 +149,7 @@ main {
   color: var(--main-text);
   font-size: 2rem;
   text-align: right;
+  transition: all 0.7s linear;
 }
 .btn__group {
   display: grid;
@@ -156,6 +159,7 @@ main {
   background-color: var(--container-bg);
   padding: 1.5rem 1.2rem;
   border-radius: 10px;
+  transition: all 0.7s linear;
 }
 @media screen and (min-width: 400px) {
   .btn__group {
@@ -173,6 +177,7 @@ main {
   cursor: pointer;
   font: inherit;
   font-size: 1.5rem;
+  transition: all 0.7s linear;
 }
 @media screen and (min-width: 400px) {
   .btn {
