@@ -80,7 +80,9 @@ main {
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  background-color: red;
+}
+.container {
+  align-items: center;
 }
 .header {
   display: flex;
