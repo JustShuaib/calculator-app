@@ -71,7 +71,7 @@
 }
 body {
   background-color: var(--main-bg);
-  height: 100vh;
+  max-height: 100vh;
 }
 main {
   width: 100%;
@@ -79,7 +79,7 @@ main {
   display: grid;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  /* padding: 2rem; */
 }
 .container {
   /* align-items: center; */
