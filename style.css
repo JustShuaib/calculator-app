@@ -75,7 +75,7 @@ body {
 }
 main {
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   display: grid;
   background-color: red;
   justify-content: center;
@@ -149,7 +149,7 @@ main {
   font-size: 2rem;
   text-align: right;
 }
-.container {
+.btn__group {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, 1fr);
@@ -159,7 +159,7 @@ main {
   border-radius: 10px;
 }
 @media screen and (min-width: 400px) {
-  .container {
+  .btn__group {
     gap: 1rem;
   }
 }
